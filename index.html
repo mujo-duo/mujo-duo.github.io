@@ -142,6 +142,50 @@
       height: 10px;
       background: linear-gradient(to right, #008000, #FFD700, #D91023);
     }
+
+    .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .info-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  .info-card span {
+    font-size: 1.8rem;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .info-card h3 {
+    font-size: 1.1rem;
+    margin: 0 0 8px;
+    color: #333;
+  }
+  
+  .info-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0;
+  }
+  
+
+
+    
   </style>
 </head>
 <body>
@@ -176,30 +220,96 @@
     </div>
   </section>
 
-  <section class="section">
+<section class="section">
   <h2>Top Places to Visit Around Arba Minch</h2>
-  <ul style="max-width: 800px; margin: 0 auto; text-align: left; font-size: 1.05rem; line-height: 1.8;">
-    <li>🌅 Arba Minch Town</li>
-    <li>🛶 Lake Chamo & the Crocodile Market</li>
-    <li>🦓 Nechisar National Park</li>
-    <li>🏠 Dorze Village (culture & weaving)</li>
-    <li>🏞️ Omo Valley tribes & traditions</li>
-    <li>🌄 Konso terraced landscapes (UNESCO site)</li>
-    <li>🐘 Chebera Churchura National Park</li>
-    <li>🦓 Maze National Park</li>
-    <li>🏨 Halala Kella Luxury Resort</li>
-    <li>🍲 Local food and cultural experiences</li>
-  </ul>
+  <div class="info-grid">
+
+    <div class="info-card">
+      <span>🌅</span>
+      <h3>Arba Minch Town</h3>
+      <p>Gateway to lakes, nature, and culture — the heart of your adventure.</p>
+    </div>
+
+    <div class="info-card">
+      <span>🛶</span>
+      <h3>Lake Chamo & Crocodile Market</h3>
+      <p>See giant Nile crocodiles and hippos in their natural habitat.</p>
+    </div>
+
+    <div class="info-card">
+      <span>🦓</span>
+      <h3>Nechisar National Park</h3>
+      <p>Wildlife, savannas, and incredible viewpoints from the “Bridge of God.”</p>
+    </div>
+
+    <div class="info-card">
+      <span>🏠</span>
+      <h3>Dorze Village</h3>
+      <p>Discover traditional weaving, dance, and bamboo houses.</p>
+    </div>
+
+    <div class="info-card">
+      <span>🏞️</span>
+      <h3>Omo Valley</h3>
+      <p>Explore the diverse cultures and tribes of southern Ethiopia.</p>
+    </div>
+
+    <div class="info-card">
+      <span>🌄</span>
+      <h3>Konso</h3>
+      <p>Terraced landscapes and cultural sites recognized by UNESCO.</p>
+    </div>
+
+    <div class="info-card">
+      <span>🐘</span>
+      <h3>Chebera Churchura NP</h3>
+      <p>A remote national park home to elephants, lions, and lush forest.</p>
+    </div>
+
+    <div class="info-card">
+      <span>🦓</span>
+      <h3>Maze National Park</h3>
+      <p>Great wildlife viewing in a lesser-known savanna setting.</p>
+    </div>
+
+    <div class="info-card">
+      <span>🏨</span>
+      <h3>Halala Kella Resort</h3>
+      <p>Luxury eco-lodge overlooking the lakes — a serene escape.</p>
+    </div>
+
+    <div class="info-card">
+      <span>🍲</span>
+      <h3>Traditional Cuisine</h3>
+      <p>Enjoy injera, doro wat, and local specialties full of flavor.</p>
+    </div>
+
+  </div>
 </section>
 
-  <section class="section">
+
+ <section class="section">
   <h2>Our Services</h2>
-  <ul style="max-width: 800px; margin: 0 auto; text-align: left; font-size: 1.05rem; line-height: 1.8;">
-    <li>🚗 <strong>Car Rental</strong> – Tourist-standard vehicles for all group sizes</li>
-    <li>🧭 <strong>Guide Services</strong> – Knowledgeable local guides fluent in English and local languages</li>
-    <li>🏕️ <strong>Camping & Hiking</strong> – Complete trip planning and equipment arrangement for outdoor adventures</li>
-  </ul>
+  <div class="info-grid">
+
+    <div class="info-card">
+      <h3>Car Rental</h3>
+      <p>Tourist-standard vehicles for individuals and groups — comfortable and reliable.</p>
+    </div>
+
+    <div class="info-card">
+      <h3>Guide Services</h3>
+      <p>Expert local guides with deep knowledge of history, nature, and culture.</p>
+    </div>
+
+    <div class="info-card">
+      <h3>Camping & Hiking</h3>
+      <p>We organize complete outdoor experiences including equipment, routes, and permits.</p>
+    </div>
+
+  </div>
 </section>
+
 
 
 
