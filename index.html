@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Discover Arba Minch</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <style>
     body {
       margin: 0;
@@ -95,6 +96,32 @@
       color: #666;
     }
 
+    .swiper {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .swiper-slide {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .swiper-slide h3 {
+      padding: 10px;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
     footer {
       background-color: #f9f9f9;
       padding: 40px 20px;
@@ -112,7 +139,7 @@
     }
 
     .ethiopian-stripe {
-      height: 8px;
+      height: 10px;
       background: linear-gradient(to right, #008000, #FFD700, #D91023);
     }
   </style>
@@ -144,8 +171,29 @@
       <div class="card">
         <img src="lakes.jpg" alt="Lakes">
         <h3>Lake Adventures</h3>
-        <p>Take a boat trip across Lake Chamo and Lake Abaya.</p>
+        <p>Take a boat trip across Lake Chamo.</p>
       </div>
+    </div>
+  </section>
+
+   <!-- Carousel Section -->
+  <section class="section">
+    <h2>Top Places to Visit</h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="arba-minch.jpg" alt="Arba Minch"><h3>Arba Minch</h3></div>
+        <div class="swiper-slide"><img src="lake-chamo.jpg" alt="Lake Chamo"><h3>Lake Chamo</h3></div>
+        <div class="swiper-slide"><img src="crocodile-market.jpg" alt="Crocodile Market"><h3>Crocodile Market</h3></div>
+        <div class="swiper-slide"><img src="nechisar.jpg" alt="Nechisar"><h3>Nechisar National Park</h3></div>
+        <div class="swiper-slide"><img src="dorze.jpg" alt="Dorze"><h3>Dorze Village</h3></div>
+        <div class="swiper-slide"><img src="omo-valley.jpg" alt="Omo Valley"><h3>Omo Valley</h3></div>
+        <div class="swiper-slide"><img src="konso.jpg" alt="Konso"><h3>Konso</h3></div>
+        <div class="swiper-slide"><img src="chebera.jpg" alt="Chebera Churchura"><h3>Chebera Churchura National Park</h3></div>
+        <div class="swiper-slide"><img src="maze.jpg" alt="Maze"><h3>Maze National Park</h3></div>
+        <div class="swiper-slide"><img src="halala.jpg" alt="Halala Kella"><h3>Halala Kella Luxury Resort</h3></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
   </section>
 
@@ -161,6 +209,23 @@
     <p>Owner: Sewunet Amare</p>
     &copy; 2025 Sewa Sew Tour and Travel | Proudly built in Ethiopia 🇪🇹
   </footer>
+
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+      }
+    });
+  </script>
 
 </body>
 </html>
