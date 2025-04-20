@@ -1,11 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Welcome to My Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discover Arba Minch</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+    }
+
+    header {
+      background: url('hero.jpg') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+      position: relative;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.4);
+      z-index: 1;
+    }
+
+    header h1, header p {
+      z-index: 2;
+      margin: 0;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 40px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 15px 0 10px;
+    }
+
+    .card p {
+      padding: 0 15px 20px;
+      font-size: 0.95rem;
+      color: #666;
+    }
+
+    footer {
+      background-color: #f9f9f9;
+      padding: 40px 20px;
+      text-align: center;
+      border-top: 1px solid #eee;
+      font-size: 0.9rem;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin: 10px;
+      color: #007E33;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .ethiopian-stripe {
+      height: 8px;
+      background: linear-gradient(to right, #008000, #FFD700, #D91023);
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <p>This is my GitHub Pages website!</p>
+
+  <!-- Header / Hero Section -->
+  <header>
+    <h1>Welcome to Arba Minch</h1>
+    <p>Discover culture, adventure, and nature — all in one place.</p>
+  </header>
+
+  <div class="ethiopian-stripe"></div>
+
+  <!-- Explore Section -->
+  <section class="section">
+    <h2>Explore the Area</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="nature.jpg" alt="Nature">
+        <h3>Nature & Wildlife</h3>
+        <p>See hippos, crocodiles, and zebras in Nechisar National Park.</p>
+      </div>
+      <div class="card">
+        <img src="culture.jpg" alt="Culture">
+        <h3>Culture & Traditions</h3>
+        <p>Meet the Dorze people and experience weaving and dance.</p>
+      </div>
+      <div class="card">
+        <img src="lakes.jpg" alt="Lakes">
+        <h3>Lake Adventures</h3>
+        <p>Take a boat trip across Lake Chamo and Lake Abaya.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact">
+    <h2>Contact Us</h2>
+    <p>Want to plan a tour or learn more?</p>
+    <a href="mailto:hello@arbatravel.com">📧 hello@arbatravel.com</a><br>
+    <a href="https://wa.me/251911000000" target="_blank">📱 WhatsApp Us</a>
+  </section>
+
+  <footer>
+    &copy; 2025 Arba Minch Travel Co. | Proudly built in Ethiopia 🇪🇹
+  </footer>
+
 </body>
 </html>
