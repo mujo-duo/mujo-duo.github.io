@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <style>
     body {
+      
       margin: 0;
       font-family: 'Poppins', sans-serif;
       background-color: #fdfdfd;
@@ -190,6 +191,45 @@
     .card-red      { background: #D91023; }
     .card-blue     { background: #007ACC; }
     .card-neutral  { background: #444; }
+
+    .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 15px 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+  }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    
+    .logo {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #008000; /* green accent */
+    }
+    
+    .contact-btn {
+      background-color: #D91023; /* Ethiopian red */
+      color: white;
+      padding: 8px 16px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+    
+    .contact-btn:hover {
+      background-color: #b20c1c;
+    }
+
     
 
 
@@ -197,6 +237,12 @@
   </style>
 </head>
 <body>
+  <nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">Sewa Sew Tour and Travel </div>
+    <a class="contact-btn" href="#contact">Contact</a>
+  </div>
+</nav>
 
   <!-- Header / Hero Section -->
   <header>
@@ -314,9 +360,8 @@
 </section>
 
 
+  <section class="section contact" id="contact">
 
-
-  <section class="section contact">
     <h2>Contact Us</h2>
     <p>Want to plan a tour or learn more?</p>
     <a href="mailto:sewunetamare@gmail.com">📧 sewunetamare@gmail.com</a><br>
