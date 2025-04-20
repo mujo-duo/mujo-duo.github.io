@@ -144,45 +144,51 @@
     }
 
     .info-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  
-  .info-card {
-    background: #fff;
-    border: 1px solid #eee;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .info-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  }
-  
-  .info-card span {
-    font-size: 1.8rem;
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  .info-card h3 {
-    font-size: 1.1rem;
-    margin: 0 0 8px;
-    color: #333;
-  }
-  
-  .info-card p {
-    font-size: 0.95rem;
-    color: #555;
-    margin: 0;
-  }
-  
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    /* Color themes for blocks */
+    .info-card {
+      border-radius: 14px;
+      padding: 20px;
+      color: white;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+    }
+    
+    .info-card span {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 10px;
+    }
+    
+    .info-card h3 {
+      font-size: 1.2rem;
+      margin: 0 0 10px;
+      font-weight: 600;
+    }
+    
+    .info-card p {
+      font-size: 0.95rem;
+      margin: 0;
+    }
+    
+    /* Individual color themes */
+    .card-green    { background: #008000; }
+    .card-yellow   { background: #FFD700; color: #333; }
+    .card-red      { background: #D91023; }
+    .card-blue     { background: #007ACC; }
+    .card-neutral  { background: #444; }
+    
 
 
     
@@ -224,65 +230,60 @@
   <h2>Top Places to Visit Around Arba Minch</h2>
   <div class="info-grid">
 
-    <div class="info-card">
+    <div class="info-card card-yellow">
       <span>🌅</span>
       <h3>Arba Minch Town</h3>
       <p>Gateway to lakes, nature, and culture — the heart of your adventure.</p>
     </div>
 
-    <div class="info-card">
+    <div class="info-card card-blue">
       <span>🛶</span>
       <h3>Lake Chamo & Crocodile Market</h3>
       <p>See giant Nile crocodiles and hippos in their natural habitat.</p>
     </div>
 
-    <div class="info-card">
+    <div class="info-card card-green">
       <span>🦓</span>
       <h3>Neche Sar National Park</h3>
       <p>Wildlife and incredible viewpoints from "God's Bridge".</p>
     </div>
 
-    <div class="info-card">
+    <div class="info-card card-red">
       <span>🏠</span>
       <h3>Dorze Village</h3>
       <p>Discover traditional weaving, dance, and bamboo houses.</p>
     </div>
 
-    <div class="info-card">
+    <div class="info-card card-green">
       <span>🏞️</span>
       <h3>Omo Valley</h3>
       <p>Explore the diverse cultures and tribes of southern Ethiopia.</p>
     </div>
 
-    <div class="info-card">
+    <div class="info-card card-yellow">
       <span>🌄</span>
       <h3>Konso</h3>
       <p>Terraced landscapes and cultural sites recognized by UNESCO.</p>
     </div>
 
-    <div class="info-card">
+    <div class="info-card card-red">
       <span>🐘</span>
       <h3>Chebera Churchura</h3>
       <p>A remote national park home to elephants, lions, and lush forest.</p>
     </div>
 
-    <div class="info-card">
-      <span>🦓</span>
+    <div class="info-card card-green">
+      <span>🌳</span>
       <h3>Maze National Park</h3>
       <p>Great wildlife viewing in a lesser-known savanna setting.</p>
     </div>
 
-    <div class="info-card">
+    <div class="info-card card-blue">
       <span>🏨</span>
       <h3>Halala Kella Resort</h3>
       <p>Luxury eco-lodge overlooking the lakes — a serene escape.</p>
     </div>
 
-    <div class="info-card">
-      <span>🍲</span>
-      <h3>Traditional Cuisine</h3>
-      <p>Enjoy injera, doro wat, enset and local specialties full of flavor.</p>
-    </div>
 
   </div>
 </section>
