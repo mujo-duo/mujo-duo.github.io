@@ -68,9 +68,9 @@
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 30px;
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 0 auto;
     }
 
@@ -80,6 +80,8 @@
       box-shadow: 0 8px 16px rgba(0,0,0,0.1);
       overflow: hidden;
       transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
     }
 
     .card:hover {
@@ -88,18 +90,49 @@
 
     .card img {
       width: 100%;
-      height: 180px;
+      height: 220px;
       object-fit: cover;
     }
 
+    .card-content {
+      padding: 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
     .card h3 {
-      margin: 15px 0 10px;
+      margin: 0 0 15px;
+      color: #008000;
+      font-size: 1.4rem;
     }
 
     .card p {
-      padding: 0 15px 20px;
-      font-size: 0.95rem;
+      margin: 0 0 20px;
+      font-size: 1rem;
       color: #666;
+      line-height: 1.6;
+    }
+
+    .card-features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .card-features li {
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card-features li::before {
+      content: "•";
+      color: #008000;
+      font-weight: bold;
     }
 
     .swiper {
@@ -220,18 +253,57 @@
       color: #008000; /* green accent */
     }
     
-    .contact-btn {
-      background-color: #D91023; /* Ethiopian red */
-      color: white;
-      padding: 8px 16px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 500;
-      transition: background-color 0.3s ease;
+    .contact-details {
+      display: flex;
+      gap: 20px;
+      align-items: center;
     }
     
-    .contact-btn:hover {
-      background-color: #b20c1c;
+    .contact-details a {
+      color: #333;
+      text-decoration: none;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    
+    .contact-details a:hover {
+      color: #008000;
+    }
+
+    .attractions-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .attraction-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .attraction-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .attraction-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .attraction-card h3 {
+      padding: 15px;
+      margin: 0;
+      font-size: 1.1rem;
+      color: #333;
     }
 
     
@@ -244,7 +316,11 @@
   <nav class="navbar">
   <div class="nav-container">
     <div class="logo">Sewa Sew Tour and Travel </div>
-    <a class="contact-btn" href="#contact">Contact</a>
+    <div class="contact-details">
+      <a href="mailto:sewunetamare@gmail.com">📧 sewunetamare@gmail.com</a>
+      <a href="https://wa.me/251913724664" target="_blank">📱 WhatsApp</a>
+      <a href="tel:+251913724664">📞 +251 913 724664</a>
+    </div>
   </div>
 </nav>
 
@@ -262,76 +338,88 @@
     <div class="cards">
       <div class="card">
         <img src="crocodile.jpg" alt="Nature">
-        <h3>Nature & Wildlife</h3>
-        <p>See hippos, crocodiles, and other wildlife in Neche Sar National Park.</p>
+        <div class="card-content">
+          <h3>Nature & Wildlife</h3>
+          <p>Experience the rich biodiversity of Neche Sar National Park, home to diverse wildlife and stunning landscapes.</p>
+          <ul class="card-features">
+            <li>Crocodile Market viewing</li>
+            <li>Hippo watching</li>
+            <li>Bird watching</li>
+            <li>Nature trails</li>
+          </ul>
+        </div>
       </div>
       <div class="card">
         <img src="culture.jpg" alt="Culture">
-        <h3>Culture & Traditions</h3>
-        <p>Meet the Dorze people and experience weaving and dance.</p>
+        <div class="card-content">
+          <h3>Culture & Traditions</h3>
+          <p>Immerse yourself in the vibrant culture of the Dorze people and their unique way of life.</p>
+          <ul class="card-features">
+            <li>Traditional weaving</li>
+            <li>Cultural dances</li>
+            <li>Local cuisine</li>
+            <li>Village tours</li>
+          </ul>
+        </div>
       </div>
       <div class="card">
         <img src="lake-chamo.jpg" alt="Lakes">
-        <h3>Lake View</h3>
-        <p>Take a serene boat trip across Lake Chamo.</p>
+        <div class="card-content">
+          <h3>Lake Adventures</h3>
+          <p>Discover the beauty of Lake Chamo through various water activities and scenic views.</p>
+          <ul class="card-features">
+            <li>Boat tours</li>
+            <li>Fishing trips</li>
+            <li>Sunset cruises</li>
+            <li>Photography spots</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
 
   <section class="section">
-  <h2>Attractions In and Around Arba Minch</h2>
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-
-      <div class="swiper-slide">
+    <h2>Attractions In and Around Arba Minch</h2>
+    <div class="attractions-grid">
+      <div class="attraction-card">
         <img src="arba-minch.jpg" alt="Arba Minch Town">
         <h3>Arba Minch Town</h3>
       </div>
-      <div class="swiper-slide">
+      <div class="attraction-card">
         <img src="lake-chamo-2.jpg" alt="Lake Chamo">
         <h3>Lake Chamo & Crocodile Market</h3>
       </div>
-      <div class="swiper-slide">
+      <div class="attraction-card">
         <img src="nechisar.jpg" alt="Neche Sar National Park">
         <h3>Neche Sar National Park</h3>
       </div>
-      <div class="swiper-slide">
+      <div class="attraction-card">
         <img src="dorze.jpg" alt="Dorze Village">
         <h3>Dorze Village</h3>
       </div>
-      <div class="swiper-slide">
+      <div class="attraction-card">
         <img src="omo.jpg" alt="Omo Valley">
         <h3>Omo Valley</h3>
       </div>
-      <div class="swiper-slide">
+      <div class="attraction-card">
         <img src="konso.jpg" alt="Konso">
         <h3>Konso</h3>
       </div>
-      <div class="swiper-slide">
+      <div class="attraction-card">
         <img src="chebera.jpg" alt="Chebera Churchura">
         <h3>Chebera Churchura</h3>
       </div>
-      <div class="swiper-slide">
+      <div class="attraction-card">
         <img src="maze.jpg" alt="Maze National Park">
         <h3>Maze National Park</h3>
       </div>
-      <div class="swiper-slide">
+      <div class="attraction-card">
         <img src="halala.jpg" alt="Halala Kella Resort">
         <h3>Halala Kella Resort</h3>
       </div>
-      <div class="swiper-slide">
-        <img src="food.jpeg" alt="Food">
-        <h3>Ethiopian Food</h3>
-      </div>
-
     </div>
-
-    <!-- Nav arrows -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
-</section>
+  </section>
 
 
 
@@ -376,23 +464,6 @@
     <p>Owner: Sewunet Amare</p>
     &copy; 2025 Sewa Sew Tour and Travel | Proudly built in Ethiopia 🇪🇹
   </footer>
-
-   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      loop: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      breakpoints: {
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 }
-      }
-    });
-  </script>
 
 </body>
 </html>
