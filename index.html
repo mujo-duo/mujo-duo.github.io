@@ -175,6 +175,15 @@
       text-decoration: none;
       font-weight: 500;
       color: #2e2e2e;
+      transition: color 0.3s ease;
+    }
+
+    .contact a:hover {
+      color: #008000;
+    }
+
+    .contact .social-links {
+      margin-top: 20px;
     }
 
     .ethiopian-stripe {
@@ -266,6 +275,7 @@
       display: flex;
       align-items: center;
       gap: 5px;
+      white-space: nowrap;
     }
     
     .contact-details a:hover {
@@ -306,10 +316,99 @@
       color: #333;
     }
 
-    
+    .instagram-feed {
+      margin-top: 40px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 12px;
+    }
 
+    .instagram-feed h3 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
 
-    
+    .instagram-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .instagram-post {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      aspect-ratio: 1;
+      cursor: pointer;
+    }
+
+    .instagram-post img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .instagram-post:hover img {
+      transform: scale(1.05);
+    }
+
+    .instagram-post .post-type {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+    }
+
+    .instagram-post .post-link {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+      color: white;
+      padding: 15px;
+      text-decoration: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .instagram-post:hover .post-link {
+      opacity: 1;
+    }
+
+    .instagram-loading {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+    }
+
+    .instagram-error {
+      text-align: center;
+      padding: 20px;
+      color: #D91023;
+      background: rgba(217, 16, 35, 0.1);
+      border-radius: 8px;
+      margin: 20px auto;
+      max-width: 600px;
+    }
+
+    .instagram-error a {
+      color: #008000;
+      text-decoration: none;
+    }
+
+    .instagram-error a:hover {
+      text-decoration: underline;
+    }
+
   </style>
 </head>
 <body>
@@ -320,6 +419,7 @@
       <a href="mailto:sewunetamare@gmail.com">📧 sewunetamare@gmail.com</a>
       <a href="https://wa.me/251913724664" target="_blank">📱 WhatsApp</a>
       <a href="tel:+251913724664">📞 +251 913 724664</a>
+      <a href="https://www.instagram.com/dorzebodovillage23/" target="_blank">📸 Instagram</a>
     </div>
   </div>
 </nav>
@@ -449,15 +549,17 @@
 
 
   <section class="section contact" id="contact">
-
     <h2>Contact Us</h2>
     <p>Want to plan a tour or learn more?</p>
     <a href="mailto:sewunetamare@gmail.com">📧 sewunetamare@gmail.com</a><br>
-    <a href="https://wa.me/251913724664" target="_blank">📱 WhatsApp Us</a>
-
+    <a href="https://wa.me/251913724664" target="_blank">📱 WhatsApp Us</a><br>
     <a href="tel:+251911000001">📞 +251 913 724664</a><br>
     <a href="tel:+251912000002">📞 +251 713 724664</a><br>
     <a href="tel:+251913000003">📞 +251 707 724664</a>
+
+    <div class="social-links">
+      <a href="https://www.instagram.com/dorzebodovillage23/" target="_blank">📸 Follow us on Instagram</a>
+    </div>
   </section>
 
   <footer>
